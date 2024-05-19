@@ -1,0 +1,21 @@
+{
+	"manifest_version": 3,
+	"name": "es6-browser-extension-boilerplate",
+	"version": "1.0.0",
+	"description": "A browser extension to simulate user interactions.",
+	"author": "Andrei-Boghiu",
+	"background": {
+		"service_worker": "background.js"
+	},
+	"content_scripts": [
+		{
+			"matches": ["<all_urls>"],
+			"js": ["content.js"]
+		}
+	],
+	"options_page": "options/options.html",
+	"action": {
+		"default_popup": "popup/popup.html"
+	},
+	"permissions": ["activeTab", "scripting"]
+}
